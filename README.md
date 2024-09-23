@@ -1,9 +1,13 @@
 # UdemyAngular0724
 ## Courses
+### Create a new component
 ```shell
 $ ng g c user
 $ ng generated component user (extended)
 ```
+### Auto complete
+Mac
+[cmd]+i
 ## Default Docs
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
