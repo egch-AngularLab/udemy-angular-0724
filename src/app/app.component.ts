@@ -10,8 +10,12 @@ import { DUMMY_USERS } from "./user/dummy-users";
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+
 export class AppComponent {
   users = DUMMY_USERS;
 
+  onSelectUser(id: string) {
+    console.log(' selected user with id '+ id);
+  }
 
 }
