@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output, output} from '@angular/core';
 
 
 @Component({
@@ -13,8 +13,11 @@ export class UserComponent {
   @Input({ required: true}) name!: string;
   @Input({ required: true}) id!: string;
 
+  //instead of this we use the output function
+  // @Output() select = new EventEmitter();
 
-  @Output() select = new EventEmitter();
+  //we need to specify the type produced by output event, with generics
+  select = output<string>();
 
 
  get imagePath(){
