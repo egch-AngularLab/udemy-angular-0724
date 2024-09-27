@@ -14,7 +14,8 @@ export class UserComponent {
   @Input({ required: true}) id!: string;
 
   //instead of this we use the output function
-  @Output() select = new EventEmitter();
+  //I can specify the type with generics
+  @Output() select = new EventEmitter<string>();
 
   //we need to specify the type produced by output event, with generics
   //select = output<string>();
