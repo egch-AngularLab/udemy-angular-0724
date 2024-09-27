@@ -17,12 +17,13 @@ export class AppComponent {
   selectedUserId = 'u1';
 
   get selectedUser() {
+    //adding the explanation mark makes sure we will always find the user
+    //so no compilation issue in TS
     return this.users.find( (user) => user.id == this.selectedUserId)!;
   }
 
   onSelectUser(id: string) {
     this.selectedUserId = id;
-    
   }
 
 }
