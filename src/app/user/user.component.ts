@@ -1,6 +1,21 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 
+//adding my own Type
+type User =  {
+  id: string;
+  avatar: string,
+  name: string  
+};
+
+//I can also use an interface...here there is not equal
+interface UserI {
+    id: string;
+    avatar: string,
+    name: string  
+}
+
+
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -8,11 +23,11 @@ import { Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  @Input({required: true}) user!: {
-    id: string;
-    avatar: string,
-    name: string  
-  };
+  //here using the type
+  //@Input({required: true}) user!: User;
+
+  //here using the interface
+  @Input({required: true}) user!: UserI;
 
 
 
