@@ -8,10 +8,13 @@ import { Component, EventEmitter, Input, Output} from '@angular/core';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
+  @Input({required: true}) user!: {
+    id: string;
+    avatar: string,
+    name: string  
+  };
 
-  @Input({ required: true}) avatar!: string;
-  @Input({ required: true}) name!: string;
-  @Input({ required: true}) id!: string;
+
 
   //instead of this we use the output function
   //I can specify the type with generics
@@ -22,11 +25,11 @@ export class UserComponent {
 
 
  get imagePath(){
-   return 'assets/users/' + this.avatar;
+   return 'assets/users/' + this.user.avatar;
  }
  
  onSelectUser() {
-  this.select.emit(this.id);
+  this.select.emit(this.user.id);
  }
 
 }
