@@ -1,5 +1,7 @@
 # UdemyAngular0724
 ## Courses
+### Live on Azure
+[udemy-angular-0724 on Azure](https://agreeable-forest-006ccf303.5.azurestaticapps.net/) 
 ### Create a new component
 ```shell
 $ ng g c user
