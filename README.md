@@ -5,6 +5,10 @@
 $ ng g c user
 $ ng generated component user (extended)
 ```
+#### Within another component
+```shell
+$ ng g c tasks/task
+```
 ### Auto complete
 Mac
 [cmd]+i
