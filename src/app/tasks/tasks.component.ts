@@ -44,5 +44,10 @@ export class TasksComponent {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
 
+  onCompleteTask(id: string) {
+    //here we want to remove that task (completed) by the list of tasks
+    this.tasks = this.tasks.filter((task) => task.id !== id)
+
+  }
 
 }
