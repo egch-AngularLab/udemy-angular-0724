@@ -1,19 +1,11 @@
 import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 
-//adding my own Type
-type User =  {
-  id: string;
-  avatar: string,
-  name: string  
-};
+import { User } from './user.model';
 
-//I can also use an interface...here there is not equal
-interface UserI {
-    id: string;
-    avatar: string,
-    name: string  
-}
+//this is equivalent, but not mandatory
+//import { type User } from './user.model';
+
 
 
 @Component({
@@ -27,7 +19,7 @@ export class UserComponent {
   //@Input({required: true}) user!: User;
 
   //here using the interface
-  @Input({required: true}) user!: UserI;
+  @Input({required: true}) user!: User;
 
 
 
