@@ -1,5 +1,6 @@
 <div>
-    <button (click)="onSelectUser()">
+    <!-- refers to the active css in the user.component.css -->
+    <button [class.active]="selected"  (click)="onSelectUser()">
         <!--"imagePath" is calling getImagePath() from user.component.ts  -->
         <img 
             [src]="imagePath"  
